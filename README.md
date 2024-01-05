@@ -1,5 +1,11 @@
 # Moishi Netzer - Hotel List Web App
 
+<!-- Flex: -->
+<p float="left" align="center" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;">
+  <img src="public/Screenshot-hotels.png" width="50%" />
+  <img src="public/Screenshot-single-hotel.png" width="50%" />
+</p>
+
 ## Installation
 
 First, install dependencies:
