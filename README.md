@@ -10,7 +10,7 @@ npm install
 bun install
 ```
 
-Generate the prisma client for DB access and typesafety:
+Generate the Prisma client for DB access and type-safety:
 
 ```sh
 npx prisma migrate dev
@@ -37,7 +37,7 @@ The solution I have opted for is a full-stack application using the following te
   - Running off of a [Vite](https://vitejs.dev/) server
 - [TailwindCSS](https://tailwindcss.com/) for styling
 - [Prisma](https://www.prisma.io/) as an ORM for both generating the DB client and accessing the DB in a type-safe fashion
-- [SQLite](https://www.sqlite.org/index.html) is the databse being used for this application for reasons listed below
+- [SQLite](https://www.sqlite.org/index.html) is the database being used for this application for reasons listed below
 - [Prettier](https://prettier.io/docs) for formatting
 - [ESLint](https://eslint.org/) for linting with sensible defaults provided
 
@@ -47,7 +47,7 @@ The backend is provided by Remix. Whilst this may seem counter-intuitive it allo
 
 > Quick Intro
 
-In remix you use loaders to define endpoints so for the following:
+In Remix, you use loaders to define endpoints so for the following:
 
 ```tsx
 // > mysite.com/hotels
@@ -58,9 +58,9 @@ export function loader() {
 }
 ```
 
-This prompts remix to create an endpoint at the `/hotels` route. exporting a `loader` creates a `GET` handler, and exporting an `action` creates a `POST` handler.
+This prompts Remix to create an endpoint at the `/hotels` route. exporting a `loader` creates a `GET` handler, and exporting an `action` creates a `POST` handler.
 
-Remix uses this `loader` to fetch the data BEFORE the page loads, essentially blocking page load until the data is available for the client to use. This means no need to handle pending state whatsoever. When you load the page it is fully hydrated with your data.
+Remix uses this `loader` to fetch the data BEFORE the page loads, essentially blocking page load until the data is available for the client to use. This means no need to handle a pending state whatsoever. When you load the page it is fully hydrated with your data.
 
 Using the data looks like this:
 
@@ -76,13 +76,13 @@ export default function HotelsRoute() {
 }
 ```
 
-Sometimes however you want page to load first and stream the result in later, this is where Remix `defer` comes in. It's an implementation of React's `Suspense` component.
+Sometimes however you want the page to load first and stream the result in later, this is where Remix `defer` comes in. It's an implementation of React's `Suspense` component.
 
-I have implemented an alternative index route which implements this behaviour in: [`/app/routes/deffered.tsx`](app/routes/deferred.tsx)
+I have implemented an alternative index route which implements this behaviour in [`/app/routes/deferred.tsx`](app/routes/deferred.tsx)
 
-The beauty of using Remix is that your routes provide the HTML but can also deliver the raw json to be reused in your native apps and can be a backend for any frontend you wish to hook up!
+The beauty of using Remix is that your routes provide the HTML but can also deliver the raw JSON to be reused in your native apps and can be a backend for any frontend you wish to hook up!
 
-For example, whilst runnning this app, try a GET request with the following:
+For example, whilst running this app, try a GET request with the following:
 
 ```sh
 # Don't worry too much about the "?index&_data" part - that's a remix implementation that's being improved soon
@@ -93,7 +93,7 @@ curl "localhost:5173?index&_data"
 curl "localhost:5173/3?_data"
 ```
 
-Notice how all the hotels are being sent as a JSON response! This is the beauty of remix. Even using this to proxy to another API, e.g. Laravel 😉 allows you to use this as your central API hander if you want a single source of truth for all of your frontends, React, React Native, anything really.
+Notice how all the hotels are being sent as a JSON response! This is the beauty of remix. Even using this to proxy to another API, e.g. Laravel 😉 allows you to use this as your central API hander if you want a single source of truth for all of your frontends, React, React Native - anything really.
 
 ## Frontend
 
@@ -118,9 +118,9 @@ You will notice at the bottom of my `package.json` that I have the following:
 }
 ```
 
-When prisma generates the initial data it seeds the database. The beauty of it running a ts script is that the file can be run manually and after you will look at it you will see it is implemented with flexibility in mind so that seeding new/more data is easily possible when needed.
+When Prisma generates the initial data it seeds the database. The beauty of running a ts script is that the file can be run manually and after you look at it you will see it is implemented with flexibility in mind so that seeding new/more data is easily possible when needed.
 
-For future of course it would be easier to implement full CRUD into this app, however I believe this was out of scope of the requested task.
+For the future of course it would be easier to implement full CRUD into this app, however, I believe this was out of the scope of the requested task.
 
 ## Fin
 
