@@ -16,6 +16,14 @@ npm install
 bun install
 ```
 
+Generate the prisma client for DB access and typesafety:
+
+```sh
+npx prisma migrate dev
+# bun:
+bunx prisma migrate dev
+```
+
 Then, run the project:
 
 ```sh
