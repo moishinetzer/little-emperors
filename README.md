@@ -1,10 +1,4 @@
-Run the Vite dev server:
-
-```sh
-npm run dev
-```
-
-# Solution - Hotel List Web App
+# Moishi Netzer - Hotel List Web App
 
 ## Installation
 
