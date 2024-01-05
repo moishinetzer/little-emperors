@@ -93,7 +93,7 @@ For example, whilst running this app, try a GET request with the following:
 ```sh
 # Don't worry too much about the "?index&_data" part - that's a remix implementation that's being improved soon
 # Get all hotels
-curl "localhost:5173?index&_data"
+curl "localhost:5173/?index&_data"
 
 # Get a specific hotel id=3
 curl "localhost:5173/3?_data"
