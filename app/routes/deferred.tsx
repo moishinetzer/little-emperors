@@ -1,6 +1,6 @@
 import { defer, useLoaderData, Await } from "@remix-run/react";
 import { Suspense } from "react";
-import { db } from "utils/db.server";
+import { db } from "~/utils/db.server";
 import { HeroSection } from "~/components/hero-section";
 import { HotelCard, SkeletonHotelCard } from "~/components/hotel-card";
 import { Separator } from "~/components/ui/separator";

@@ -2,7 +2,7 @@ import { LoaderFunctionArgs, json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import { StarIcon, XIcon } from "lucide-react";
 import { ElementRef, useRef, useState } from "react";
-import { db } from "utils/db.server";
+import { db } from "~/utils/db.server";
 import { cn } from "~/utils/shadcn";
 import { useClamp } from "~/utils/use-clamp";
 

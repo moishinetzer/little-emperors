@@ -1,5 +1,5 @@
 import { json, useLoaderData } from "@remix-run/react";
-import { db } from "utils/db.server";
+import { db } from "~/utils/db.server";
 import { HeroSection } from "~/components/hero-section";
 import { HotelCard } from "~/components/hotel-card";
 import { Separator } from "~/components/ui/separator";
