@@ -1,4 +1,4 @@
-import { LinksFunction, MetaFunction } from "@remix-run/node";
+import { MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -8,11 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Header } from "~/components/header";
-import stylesheet from "~/index.css?url";
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
+import "~/index.css";
 
 export const meta: MetaFunction = () => {
   return [
