@@ -6,6 +6,8 @@
   <img src="public/Screenshot-single-hotel.png" width="40%" />
 </p>
 
+> **See it deployed at [little-emperors.fly.dev](https://little-emperors.fly.dev)**
+
 ## Installation
 
 First, install dependencies:
